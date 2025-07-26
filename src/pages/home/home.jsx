@@ -1,10 +1,88 @@
 import "./style.css";
+import CarouselList from "../../components/carousel";
+import ProductCard from "../../components/productCard/productCard";
+
 import {
   AnimalsIcon,
   FairyTalesIcon,
   PrincessIcon,
   ProphetsIcon,
 } from "../../assets/images";
+
+const products = [
+  {
+    id: "a23ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "Cinderella's Enchanted Evening",
+    description: "A classic tale of dreams and magic.",
+  },
+  {
+    id: "aweg3ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Brave Little Tailor",
+    description: "A tailor's wit saves the day.",
+  },
+  {
+    id: "a2weffweij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Dragon's Secret",
+    description: "A dragon with a hidden heart.",
+  },
+  {
+    id: "a23pppklij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "Cinderella's Enchanted Evening",
+    description: "A classic tale of dreams and magic.",
+  },
+  {
+    id: "awwcweeg3ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Brave Little Tailor",
+    description: "A tailor's wit saves the day.",
+  },
+  {
+    id: "a2wef767eij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Dragon's Secret",
+    description: "A dragon with a hidden heart.",
+  },
+  {
+    id: "asdgrw23ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "Cinderella's Enchanted Evening",
+    description: "A classic tale of dreams and magic.",
+  },
+  {
+    id: "awasfeg3ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Brave Little Tailor",
+    description: "A tailor's wit saves the day.",
+  },
+  {
+    id: "a2wfwj",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Dragon's Secret",
+    description: "A dragon with a hidden heart.",
+  },
+  {
+    id: "awfeg3ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Brave Little Tailor",
+    description: "A tailor's wit saves the day.",
+  },
+  {
+    id: "afsweij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Dragon's Secret",
+    description: "A dragon with a hidden heart.",
+  },
+  {
+    id: "awasg3ij",
+    image: "https://i.ibb.co/LdQkHkLT/Depth-7-Frame-0.png",
+    name: "The Brave Little Tailor",
+    description: "A tailor's wit saves the day.",
+  },
+];
 
 function Home() {
   return (
@@ -47,8 +125,20 @@ function Home() {
       </section>
 
       <section className="home-section">
-        <p className="title">Featured Stories</p>
-        <div></div>
+        <p className="title">Fairy Tales</p>
+        <div>
+          <CarouselList
+            data={products}
+            itemsPerRow={4}
+            itemsPerRowMobile={1}
+            ItemComponent={ProductCard}
+            itemSpacing={"20px"}
+            autoplay={"autoplay"}
+            autoplayDelay={4000}
+            loop={true}
+            navigation={() => <div></div>}
+          />
+        </div>
       </section>
     </div>
   );
